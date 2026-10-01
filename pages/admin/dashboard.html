@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./css/dashboard.css">
+  </head>
+  <body>
+    <aside class="side-bar">
+      <div class="head"></div>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="students.html">Students</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="application.html">Applications</a>
+        <a href="message.html">Message</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="settings.html">Settings</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+
+      <div class="btn">
+        <button class="logout-btn" type="button">Logout</button>
+        <i class="fa fa-logout"></i>
+      </div>
+    </aside>
+
+    <main>
+      <div class="header">
+        <div class="right-section">
+          <h2>Dashboard</h2>
+        </div>
+        <div class="left-section">
+          <div class="bell"><i class="fa fa-bell"></i></div>
+          <div class="profile"><h1>A</h1></div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="short-display">
+          <div class="display-box">
+            <i class="fa fa-users"></i>
+            <h4>Total Applications</h4>
+            <p>0</p>
+          </div>
+          <div class="display-box">
+            <i class="fa fa-chalkboard-teacher"></i>
+            <h4>Teachers</h4>
+            <p>0</p>
+          </div>
+          <div class="display-box">
+            <i class="fa fa-times-circle"></i>
+            <h4>Rejected</h4>
+            <p>0</p>
+          </div>
+          <div class="display-box">
+            <i class="fa fa-check-circle"></i>
+            <h4>Accepted</h4>
+            <p>0</p>
+          </div>
+          <div class="display-box">
+            <i class="fa fa-clock"></i>
+            <h4>Pending</h4>
+            <p>0</p>
+          </div>
+          
+        </div>
+
+        <div class="latest">
+          <div class="recent-application">
+            <div class="heading">
+              <h4>Recent Applications</h4>
+              <p class="view-btn">View all</p>
+            </div>
+          </div>
+          <div class="notification">
+            <div class="heading">
+              <h4>Notification</h4>
+              <p class="view-btn">View all</p>
+            </div>
+          </div>
+        </div>
+ <!-- quick action button -->
+        <div class="quick-action">
+          <h4>Quick actions</h4>
+          <div class="actions">
+            <div class="quick"><a href="notifications.html"><i class="fa fa-bell"></i></a></div>
+            <div class="quick"><a href="message.html"><i class="fa fa-envelope"></i></a></div>
+            <div class="quick"><a href="application.html"><i class="fa fa-user-times"></i></a></div>
+            <div class="quick"><a href="profile.html"><i class="fa fa-user"></i></a></div>
+            <div class="quick"><a href="settings.html"><i class="fa fa-cog"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

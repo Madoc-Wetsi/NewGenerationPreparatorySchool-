@@ -38,15 +38,15 @@
           <p class="form-subtitle">
             We'd love to hear from you. Send us a message!
           </p>
-          <form action="">
+          <form action="process-contact.php" method="post">
             <div class="form-group">
               <label for="name">Your Name</label>
-              <input type="text" id="name" placeholder="Enter your full name" />
+              <input type="text" id="name" name="name" placeholder="Enter your full name" />
             </div>
 
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" id="email" placeholder="Enter your email" />
+              <input type="email" id="email" name="email" placeholder="Enter your email" />
             </div>
 
             <div class="form-group">
@@ -54,6 +54,7 @@
               <input
                 type="text"
                 id="subject"
+                name="subject"
                 placeholder="What is this about?"
               />
             </div>
@@ -63,6 +64,7 @@
               <textarea
                 id="message"
                 rows="6"
+                name="message"
                 placeholder="Type your message here..."
               ></textarea>
             </div>
@@ -70,7 +72,7 @@
             <button class="submit" type="submit">
               <i class="fa fa-paper-plane"></i> Send Message
             </button>
-          </form>
+          </form> 
         </div>
 
         <div class="contactinfo">

@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Admission Form</title>
+    <link rel="stylesheet" href="../css/form.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-header">
+        <h1>Student Admission Form</h1>
+        <p>Please complete the form below to apply for admission.</p>
+      </div>
+
+      <form action="process-admission.php" method="post" enctype="multipart/form-data">
+        <!-- Student Information -->
+        <section>
+          <h2>Student Information</h2>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter first name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Enter last name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="dob" required />
+            </div>
+
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender" required>
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="nationality">Nationality</label>
+              <input
+                type="text"
+                id="nationality"
+                name="nationality"
+                placeholder="Enter nationality"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="religion">Religion</label>
+              <input
+                type="text"
+                id="religion"
+                name="religion"
+                placeholder="Enter religion"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Academic Information -->
+        <section>
+          <h2>Academic Information</h2>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="class">Applying For</label>
+              <select id="class" name="class" required>
+                <option value="">Select class</option>
+                <option value="kg1">Kindergarten 1</option>
+                <option value="kg2">Kindergarten 2</option>
+                <option value="basic1">Basic 1</option>
+                <option value="basic2">Basic 2</option>
+                <option value="basic3">Basic 3</option>
+                <option value="basic4">Basic 4</option>
+                <option value="basic5">Basic 5</option>
+                <option value="basic6">Basic 6</option>
+                <option value="jhs1">JHS 1</option>
+                <option value="jhs2">JHS 2</option>
+                <option value="jhs3">JHS 3</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="previousSchool">Previous School</label>
+              <input
+                type="text"
+                id="previousSchool"
+                name="previousSchool"
+                placeholder="Enter previous school"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Parent / Guardian Information -->
+        <section>
+          <h2>Parent / Guardian Information</h2>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="guardianName">Full Name</label>
+              <input
+                type="text"
+                id="guardianName"
+                name="guardianName"
+                placeholder="Parent/Guardian name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="relationship">Relationship</label>
+              <select id="relationship" name="relationship" required>
+                <option value="">Select relationship</option>
+                <option value="father">Father</option>
+                <option value="mother">Mother</option>
+                <option value="guardian">Guardian</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="e.g. 024 000 0000"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@email.com"
+              />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="address">Residential Address</label>
+              <textarea
+                id="address"
+                name="address"
+                placeholder="Enter residential address"
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+        </section>
+
+        <!-- Emergency Contact -->
+        <section>
+          <h2>Emergency Contact</h2>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="emergencyName">Contact Name</label>
+              <input
+                type="text"
+                id="emergencyName"
+                name="emergencyName"
+                placeholder="Emergency contact name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="emergencyPhone">Contact Phone</label>
+              <input
+                type="tel"
+                id="emergencyPhone"
+                name="emergencyPhone"
+                placeholder="Phone number"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Documents -->
+        <section>
+          <h2>Required Documents</h2>
+
+          <div class="form-group">
+            <label for="photo">Passport Photo</label>
+            <input type="file" id="photo" name="photo" accept="image/*" />
+          </div>
+
+          <div class="form-group">
+            <label for="documents">Other Documents</label>
+            <input
+              type="file"
+              id="documents"
+              name="documents"
+              accept=".pdf,.jpg,.jpeg,.png"
+            />
+          </div>
+        </section>
+
+        <!-- Declaration -->
+        <section class="declaration">
+          <label class="checkbox">
+            <input type="checkbox" required />
+            <span>
+              I confirm that the information provided in this admission form is
+              correct and complete.
+            </span>
+          </label>
+        </section>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+  </body>
+</html>
